@@ -20,17 +20,17 @@ public class Day4 : Day {
     }
 
     protected override void Run_Part2(List<string> input) {
-        int completePartialCount = 0;
+        int partialOverlapCount = 0;
         
         foreach (string line in input) {
             AreaPair pair = new AreaPair(line);
 
             if (pair.HasPartialOverlap()) {
-                completePartialCount++;
+                partialOverlapCount++;
             }
         }
         
-        Console.WriteLine(completePartialCount);
+        Console.WriteLine(partialOverlapCount);
     }
 
     public struct Area {
