@@ -1,7 +1,7 @@
 ﻿namespace AdventOfCode; 
 
 public abstract class Day {
-    private const string PATH = @"C:\Users\EmmetOT\RiderProjects\AdventOfCode\AdventOfCode\Inputs\";
+    private const string PATH = @"C:\Projects\AdventOfCode2022\AdventOfCode\AdventOfCode\Inputs\";
 
     public abstract int Number { get; }
 
@@ -10,7 +10,6 @@ public abstract class Day {
     
     protected static List<string> ProcessInput(string path) {
         List<string> output = new();
-    
         foreach (string line in File.ReadLines(path)) {
             output.Add(line);
         }
@@ -28,4 +27,22 @@ public abstract class Day {
     public void Run_Part2_Test() => Run_Part2(ProcessTestInput());
     public void Run_Part1_Real() => Run_Part1(ProcessRealInput());
     public void Run_Part2_Real() => Run_Part2(ProcessRealInput());
+}
+
+public static class Utils {
+    public static bool IsNullOrEmpty(this string str) {
+        return str == null || str.Length == 0;
+    }
+
+    public static T PopLast<T>(this LinkedList<T> list) {
+        var t = list.Last();
+        list.RemoveLast();
+        return t;
+    }
+    
+    public static T PopFirst<T>(this LinkedList<T> list) {
+        var t = list.First();
+        list.RemoveFirst();
+        return t;
+    }
 }
