@@ -1,7 +1,7 @@
 ﻿namespace AdventOfCode; 
 
 public abstract class Day {
-    private const string PATH = @"C:\Projects\AdventOfCode2022\AdventOfCode\AdventOfCode\Inputs\";
+    private const string PATH = @"..\..\..\Inputs\";
 
     public abstract int Number { get; }
 
