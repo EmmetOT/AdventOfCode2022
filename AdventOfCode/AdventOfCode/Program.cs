@@ -1,6 +1,6 @@
 ﻿using AdventOfCode;
 
-Day day = new Day11();
+Day day = new Day12();
 
 Console.WriteLine($"DAY {day.Number}, PART 1 TEST:");
 day.Run_Part1_Test();
